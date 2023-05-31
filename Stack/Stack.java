@@ -17,9 +17,29 @@ public class Stack <V> {
         arr = (v[] new Object[max_size]);  //type casting Object[] to V[]
     }
 
+    //returns the maximum size capacity
     public getCapacity() {
         return maxSize;
     }
+
+    //returns true if Stack is empty
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    //returns true if Stack is full
+    public boolean isFull() {
+        return top == maxSize -1;
+    }
+
+    //returns the value at top of Stack
+    public V top() {
+        if(isEmpty()){
+            return null;
+        }
+        return array[top];
+    }
+
 
 }
 
