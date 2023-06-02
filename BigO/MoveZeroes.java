@@ -3,6 +3,18 @@ package BigO;
 
 public class MoveZeroes {
     public void moveZeroes( int [] nums){
+//
+//        int ind = 0;
+//        int num = nums.length;
+//        int [] arr = new int[n];
+//        for(int i=0; i<num; i++){
+//            if(nums[i] != 0){
+//                arr[ind] = nums[i];
+//            }
+//        }
+//        for( int i=0; i<num; i++){
+//            nums[i] = arr[i];
+//        }
         int firstZero = 0;
         for( int i=0; i< nums.length; i++){
             if(nums[i] !=0){
