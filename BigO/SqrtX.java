@@ -13,4 +13,8 @@ public class SqrtX {
         }
         return i - 1;
     }
+
+    public int mySqrt(int x){
+        
+    }
 }
