@@ -10,11 +10,11 @@ package Stack;
  */
 
 
-public class Primitives {
-    Stack <Integer> s = new Stack();
-    s.push(17);
-    int a = s.pop();
-    public static void main(String[] args) {
-
-    }
-}
+//public class Primitives {
+//    Stack <Integer> s = new Stack();
+//    s.push(17);
+//    int a = s.pop();
+//    public static void main(String[] args) {
+//
+//    }
+//}
