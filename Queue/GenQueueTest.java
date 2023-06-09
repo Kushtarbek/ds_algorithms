@@ -18,8 +18,7 @@ public class GenQueueTest {
                 "Gomez", "Selena"
         ));
 
-
-        empList.addItems(hList);
+                empList.addItems(hList);
 
         while(empList.hasItems()){
             Employee emp = empList.dequeue();
