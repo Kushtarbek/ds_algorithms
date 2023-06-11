@@ -48,7 +48,7 @@ public class ArrayExamples {
 //            reverseArray(arr, start +1, end -1);
 //        }
         //Reverse array with while loop
-        private static void reverseArray(int[] a){
+        private static void reverseArray( int[] a){
             int i = 0, j = a.length, temp;
             while (i < j) {
                 temp = a[i];
