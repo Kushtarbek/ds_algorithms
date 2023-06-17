@@ -3,6 +3,7 @@ package Array;
 public class ArrayExamples {
     public static void main(String[] args) {
         int[] a = {1,2,3,4,5};
+
         //Find the maximum of the array values
         double max = a[0];
         for( int i =1; i<a.length; i++){
@@ -28,28 +29,29 @@ public class ArrayExamples {
 
 
         //Reverse the elements within an array
-//        int N2 = a.length;
-//        for( int i=0; i<N2 /2; i++){
-//            double temp = a[i];
-//            a[i] = a[N2-1-i];
-//            a[N2-i-1] = (int) temp;
-//        }
+        int N2 = a.length;
+        for( int i=0; i<N2 /2; i++){
+            double temp = a[i];
+            a[i] = a[N2-1-i];
+            a[N2-i-1] = (int) temp;
+        }
 
     }
     //Reverse the elements within an array
-    private static int reverseArray(int[] arr, int start, int end){
-//        if( start > end){
-//            return;
-//        }else{
-//            int temp;
-//            temp = arr[start];
-//            arr[start] = arr[end];
-//            arr[end] = temp;
-//            reverseArray(arr, start +1, end -1);
-//        }
+    private static void reverseArray(int[] arr, int start, int end) {
+        if (start > end) {
+            return;
+        } else {
+            int temp;
+            temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            reverseArray(arr, start + 1, end - 1);
+        }
+    }
         //Reverse array with while loop
-        private static void reverseArray( int[] a){
-            int i = 0, j = a.length, temp;
+        private static void reverseArray(int [] a){
+            int i = 0, j = a.length-1, temp;
             while (i < j) {
                 temp = a[i];
                 a[i] = a[j];
@@ -57,7 +59,6 @@ public class ArrayExamples {
                 i++;
                 j--;
             }
-
         }
 
 
@@ -71,6 +72,7 @@ public class ArrayExamples {
                     rev = rev * 10 + pop;
                 }
                 return rev;
-        }
+            }
+
     }
-}
+

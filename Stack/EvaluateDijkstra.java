@@ -1,5 +1,8 @@
 package Stack;
 
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Stack;
 
 public class EvaluateDijkstra {
