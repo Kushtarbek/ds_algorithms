@@ -18,3 +18,12 @@ public class InsertionExample {
 
     }
 }
+
+/**
+ * Typical examples of partially sorted arrays are the following:
+ *      ■ An array where each entry is not far from its final position
+ *      ■ A small array appended to a large sorted array
+ *      ■ An array with only a few entries that are not in place
+ * Insertion sort is an efficient method for such arrays; selection sort is not. Indeed, when
+ * the number of inversions is low, insertion sort is likely to be faster than any sorting method.
+ */
