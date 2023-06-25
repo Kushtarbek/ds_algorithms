@@ -8,7 +8,7 @@ import java.util.Iterator;
  */
 
 public class LinkedLists {
-    public class Stack<Item> implements Iterable<Item>
+    public static class Stack<Item> implements Iterable<Item>
     {
         private Node first; // top of stack (most recently added node)
         private int N; // number of items
