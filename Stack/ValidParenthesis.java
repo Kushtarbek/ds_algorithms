@@ -15,6 +15,6 @@ public class ValidParenthesis {
         return stack.isEmpty();
     }
     public static void main(String[] args) {
-    char arr =
+
     }
 }
