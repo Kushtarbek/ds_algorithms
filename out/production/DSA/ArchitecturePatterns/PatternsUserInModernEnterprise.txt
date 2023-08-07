@@ -1,0 +1,75 @@
+**Patter 1:  Layered Pattern (aka N-Tier pattern);**
+
+Layer n
+
+Layer n-1
+
+Layer 1
+
+*Usually 4 layers:*
+
+*Presentation layer - UI*
+
+*Application layer    - </>*
+
+*Business logic layer - []→^←[]*
+
+*Data access layer     - DB*
+
+However this pattern performs poorly in the high performance applications, because its not efficient to go through multiple layers to fulfill a business request. A layered pattern is usually is used in building general desktop applications, as well as relatively simple web apps.  its a good choice for situations with a very tight budget and time constraints.
+
+**Pattern 2: Pipe-Filtered Pattern**
+
+In many enterprise apps a single event triggers a sequence of processing steps each performing a specific function for example: customers new order
+
+the pipes pattern is often is used in compilers where the consecutive filters perform lexical analysis parsing semantic analysis and code generation.
+
+IN | →Pipe→ |FILTER| →Pipe→ |FILTER| →Pipe→ | OUT
+
+**Pattern 3: Client-Server Pattern**
+
+there are 2 main components:
+      The Client -  the service requester
+
+The Server - the service provider
+
+Although, both client and server may be located within the same system, they often communicate over a network on separate hardware.
+
+Web App ←→ Server
+
+Advantage: Ease of modeling a set of services where a clients can request them
+
+Disadvantage: Server can be a bottleneck and single point of failure, + decisions where to locate functionality in the client or in the server are often complex and costly to change after the system has been built.
+
+Real world use cases of client server pattern: online applications - email and document sharing, banking
+
+**Pattern 4: Model View Controller (MVC)**
+
+UI kept separate from the application functionality and be responsive to user input or underlying applications data
+
+Model - contains the core functionality and data
+
+View - displays the information to the user where more than one view can be defined.
+
+Controller -  handles the input from the user
+
+MVC pattern is commonly used in web frameworks such as django and rails, react.
+
+**Pattern 5: Event Bus Pattern**
+
+modern enterprise software often built as distributed system that can service asynchronously arriving messages associated with high volume of events.
+
+The Event Bus pattern has 4 major components:
+
+1. event source
+2. event listener
+3. channel
+4. event bus
+
+publisher1 -                                                         - listener1
+publisher2 -                      Event Bus                          - listener2
+publisher3 -                                                         - listener3
+
+Advantages: new publishers, subscribers, and connections can be added easily. However the scalability might be a problem for this pattern as all the messages travel through the same bus channel.
+
+Often used in android development, e-commerce applications, and notification services.

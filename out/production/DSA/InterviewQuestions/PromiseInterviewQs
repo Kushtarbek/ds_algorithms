@@ -1,0 +1,33 @@
+//interview question:
+// Warm up:
+// Given an array of numbers, write a function "getSums" that outputs the sum of the numbers in that array.
+const nums = [1,2,3,4,5,6,7,8,9];
+// function getSumNums(nums){
+//     let sum = 0;
+//     for(let i=0; i<nums.length; i++){
+//         sum += nums[i];
+//     }
+//     return sum;
+// };
+// console.log(getSumNums(nums))
+
+const addRemote = async (a, b) =>
+  // Here we use `setTimeout` to simulate the API call.
+  new Promise((resolve) => {
+    setTimeout(() => resolve(a + b), 100)
+})
+
+
+// Write your function here:
+async function getSumNums(nums){
+    const promises = 
+            nums.map((num) => addRemote(0, num));
+    const results = await Promise.all(promises);
+                  
+    const sum = 
+        results.reduce( (acc, curr) => acc + curr, 0);
+     return sum;
+ }
+
+// Should logs out 6 after the promise resolves
+console.log(getSumNums(nums))
