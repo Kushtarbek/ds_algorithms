@@ -25,7 +25,26 @@ function reverseString(str){
 }
 
 reverseString("hello");
+//----------
 
 
+function convertToFahrenheit(celsius){
+    return celsius * 9/5 +32;
+}
+//---------
 
-reverseString("hello");
+function factorialize(num) {
+  if(num < 0) return -1;
+  else if( num === 0) return 1;
+  else return (num * factorialize(num-1));
+  return num ;
+}
+
+function factorialize(num) {
+    if(num === 0 || num === 1) return 1;
+    for(let i=num-1; i>=1; i--){
+        num *= i;
+    }
+    return num;
+}
+factorialize(5);
