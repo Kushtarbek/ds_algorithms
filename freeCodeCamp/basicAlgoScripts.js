@@ -48,3 +48,21 @@ function factorialize(num) {
     return num;
 }
 factorialize(5);
+
+//----------------
+function findLongestWordLength(str) {
+  let longest = 0;
+  let arr = str.split(' ');
+  for( let i=0; i<arr.length; i++){
+    if(arr[i].length > longest){
+      longest = arr[i].length;
+    }
+  }
+  return longest;
+}
+
+function findLongestWordLength(str) {
+    str.split(' ').sort(function(a,b) { b.length - a.length});
+     return longestWord[0].length;
+}
+
