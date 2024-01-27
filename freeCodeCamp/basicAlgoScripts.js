@@ -66,3 +66,16 @@ function findLongestWordLength(str) {
      return longestWord[0].length;
 }
 
+//-------
+
+function titleCase(str) {
+  const newTitle = str.split(" ");
+  const updatedTitle = [];
+  for( let str in newTitle){
+    updatedTitle[str] = newTitle[str][0].toUpperCase() +
+    newTitle[str].slice(1).toLowerCase();
+  }
+  return updatedTitle.join(" ");
+}
+titleCase("I'm a little tea pot");
+
