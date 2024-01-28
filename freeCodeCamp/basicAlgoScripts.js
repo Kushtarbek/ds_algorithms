@@ -79,3 +79,28 @@ function titleCase(str) {
 }
 titleCase("I'm a little tea pot");
 
+//-------
+
+function frankenSplice(arr1, arr2, n) {
+  let resArr = arr2.slice();
+  for( let i=0; i<arr1.length; i++){
+      resArr.splice(n, 0, arr1[i]);
+      n++;
+  }
+  return resArr;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+//------
+function bouncer(arr) {
+  let newArr = []
+   for(let i =0; i< arr.length; i++){
+     if(arr[i]){
+       newArr.push(arr[i])
+     }
+   }
+  return newArr;
+  //return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
